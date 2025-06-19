@@ -1,0 +1,767 @@
+/* Date-Picker-JQuery Css */
+#datepicker {
+    padding: 40px;
+    font-size: 20px;
+    background-color: #eae6e6;
+   /* border-radius: 4px;  Optional: adds rounded corners */
+    
+    border: #ccc 1px solid;
+}
+
+.ui-datepicker-title {
+    background-color: #4f0000;
+    color: white;
+    font-size: 16px; /* Adjust the font size of month and year */
+}
+
+.ui-datepicker-header {
+    background-color: #4f0000; /* Change header background color */
+    color: white; /* Text color in header */
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+    display: inline-block; /* Ensure the arrows are visible */
+    color: white;
+    background-color: #4f0000; /* Set the background for the arrows */
+    outline: none;
+   
+}
+.ui-datepicker-prev {
+    left: 10px;
+    position: absolute;
+}
+
+.ui-datepicker-next {
+    right: 10px;
+    position: absolute;
+}
+
+.ui-datepicker th {
+    background-color: #4f0000; /* Header background color */
+    color: white;
+}
+
+.ui-datepicker .ui-state-active {
+    background-color: #2d3eff; /* Active date color */
+    color: white;
+}
+
+/* Custom CSS for the datepicker */
+.ui-datepicker {
+    background: white; /* Set background color */
+    border: 1px solid #ddd; /* Border around the calendar */
+    position: relative;
+}
+
+.ui-datepicker .ui-state-hover {
+    background-color: #e1e1e1; /* Hover color */
+}
+
+.ui-datepicker-prev:hover, .ui-datepicker-next:hover{
+    background-color: #4f0000;
+    color: white;
+    outline: none;
+}
+
+
+.ui-datepicker .ui-datepicker-today a {
+    background-color: #4f0000; /* Today's date background */
+    border: 1px black;
+    color: white; /* Text color for today's date */
+}
+
+.ui-datepicker .ui-state-disabled {
+    color: #ccc; /* Disabled dates color */
+}
+
+#datepicker:focus {
+    outline: none; /* Remove outline on input field when focused */
+}
+/* ------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: rgb(6, 6, 6);
+}
+
+header .navbar {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.navbar ul {
+    display: flex;
+    margin-bottom: 25px;
+    transition: max-height 0.5s ease-in-out;
+    /* overflow: hidden; */
+    max-height: 0px; /* Initially collapsed */
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 0 18px;
+    padding: 2px;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+.navbar ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+header .navbar.scrolled {
+    background-color: #4f0000;
+    box-shadow: 0 0 30px 10px rgb(31, 30, 30);
+}
+.nav img{
+    margin-left: 165px;
+    background-color: #4f0000;
+    cursor: pointer;
+}
+.btn1{
+    margin-right: 10vw;
+    transition: border-color 0.3s ease; 
+}
+header .navbar.scrolled .btn1{
+    border: #FFFFFF 2px solid;
+}
+.ham{
+    display: none;
+    cursor: pointer;
+    color: white;
+    padding: 15px; 
+}
+button{
+    
+    /* width: 135.5px;
+    height: 30px; */
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px 35px;
+    margin-left: 10px;
+    border: none;
+    background-color: #4f0000;
+    color:#FFFFFF;
+    align-self: center;
+}
+video{
+    width: 100%;
+    height: 100%;
+    margin-top: 12px;
+    margin-bottom: 45px;
+    background-color: black;
+    object-fit: cover;
+    top: 0;
+    position: relative;
+}
+.booking{
+    width: 100%;
+    background-color:#D8D8D8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+}
+.dates{
+    width: 60%;
+    display: flex;
+    padding: 30px;
+   
+}
+.dates button{
+     margin-left: 0px;
+}
+.d1,.d2{
+    width: fit-content;
+}
+ .dates input[type="text"]{
+    background-color: #D8D8D8;
+    border: solid 1px gray;
+    width: 45%;
+    padding: 12px 0;
+    padding-left: 10px;
+    outline: none;
+}
+label{
+    color: #4f0000;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0 15px;
+    padding-top: 5px;
+}
+.b1{
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.first-container{
+    width: 780px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.logoc{
+    display: none;
+}
+.logo{
+    width: 100%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 15px;
+}
+.logo img{
+    justify-items: center;
+    margin-right: 80px;
+}
+.b1 h2{
+    width: fit-content;
+    color: #A8834F;
+    margin-bottom: 15px;
+}
+.b1 span{
+    color: #2d3eff;
+}
+.logo-content{
+    width: 100%;
+    display: flex;
+}
+.logo-content img{
+    width: 40px ;
+    height: 40px ;
+    margin-right: 10px;
+}
+.s1,.s2,.s3{
+    cursor: pointer;
+    width: 240px;
+    margin: 0 10px;
+}
+.s3{
+    width: 260px;
+}
+.b1 p{
+    text-align: justify;
+    text-align-last: center;
+    font-size: 18px;
+    
+}
+.b2{
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    margin: 10px 0;
+}
+.img-container{
+    width: 56%;
+    display: block;
+    position: relative;
+   
+}
+.img2,.img3,.img4{
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0,0.5);
+}
+.content2{
+    width: 340px;
+    
+    text-align: start;
+    margin-left: 60px;
+}
+.content2 h2{
+    color: #4f0000;
+}
+.content2 p{
+    width: 250px;
+    font-size: large;
+    
+    line-height: 30px;
+}
+.content2 button{
+    background-color: white;
+    color: #A8834F;
+    border: #4f0000 solid 2px;
+    letter-spacing: 3px;
+    padding: 8px 25px;
+    margin-left: 10px;
+    font-size: large;
+    font-weight: 500;
+}
+.b3m{
+    display: none;
+}
+.b3{
+    width: 100%;
+    padding: 110px 0 110px 18vw;
+    background-color: #efe8e8;
+    display: flex;
+    margin: 10px 0;
+}
+.b3 .img-container{
+    width: 56%;
+    display: block;
+    position: absolute;
+    right: 0;
+}
+.content3{
+    width: 340px;
+    height: fit-content;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.content3 h2{
+    color: #4f0000;
+}
+.content3 p{
+    width: 280px;
+    font-size: large;
+    line-height: 30px;
+    text-align: end;
+}
+.content3  button{
+    background-color: #efe8e8;
+    color: #A8834F;
+    border: #4f0000 solid 2px;
+    letter-spacing: 3px;
+    padding: 8px 25px;
+    align-self: flex-end;
+    margin-left: 10px;
+    font-size: large;
+    font-weight: 500;
+}
+.b4{
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    
+}
+.content4{
+    width: 340px;
+    
+    text-align: start;
+    margin-left: 60px;
+}
+.content4 h2{
+    color: #4f0000;
+}
+.content4 p{
+    width: 250px;
+    font-size: large;
+    
+    line-height: 30px;
+}
+.content4 button{
+    background-color: white;
+    color: #A8834F;
+    border: #4f0000 solid 2px;
+    letter-spacing: 3px;
+    padding: 8px 25px;
+    font-size: large;
+    font-weight: 500;
+}
+
+footer{
+    border: solid #4f0000;
+    width: 100%;
+    height: fit-content;
+    margin-top: 30px;
+    padding: 0 8%;
+    background-color: #4f0000;
+    position: relative;
+    bottom: 0;
+}
+.r1{
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.location,.about,.contact,.newsletter,.icon-logo{
+    font-size: 20px;
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 10px 0;
+    margin-top: 15px;
+}
+.location{
+    width: 21%;
+}
+.contact a{
+    color: #D8D8D8;
+    text-decoration: none;
+}
+.about,.contact,.newsletter{
+    padding: 0 10px;
+}
+.about a{
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.newsletter input[type="email"]{
+    color: white;
+    font-size: 14px;
+    width: 150px;
+    height: 35px;
+    background-color: #4f0000;
+    border: none;
+    border-bottom: solid 3px #FFFFFF;
+    border-bottom-left-radius: 8px;
+    outline: none;
+}
+#id-input:focus{
+    border-bottom: solid 3px #4fa9ee;
+}
+.newsletter img{
+    margin-top: 8px;
+    padding-bottom: 8.5px;
+    border-bottom: solid 3px #FFFFFF;
+}
+.icon a{
+    text-decoration: none;
+}
+.icon img{
+    width: 50px;
+    height: 50px;
+}
+.logo img{
+    padding-top:  65px;
+    margin-left: 80px;
+}
+hr{
+    border: 0;
+    height: 2px;
+    background-color: #FFFFFF;
+    width: 98%;
+    margin: 20px 0;
+}
+.end p{
+    color: white;
+    font-size: 20px;
+}
+.bot{
+    cursor: pointer;
+    padding: 40px 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+}
+.bot img{
+    width: 160px;
+    height: 160px;
+}
+.important{
+    position: fixed;
+    border-radius: 15px;
+    bottom: 30px;
+    left: 25%;
+    width: 760px;
+    background-color: #4f0000; /* Red color for the alert */
+    color: white;
+    text-align: center;
+    padding: 0 6px;
+    padding-top: 20px;
+    font-size: 18px;
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Make sure it's on top */
+}
+.important span{
+    animation: blink 1s infinite; /*1 second for one cycle, repeat infinitely */
+    font-size: 30px;
+    
+}
+#mq{
+    display: none;
+}
+.important p{
+    font-size: 16px;
+}
+/* Styling for the close button inside the alert */
+.important .close {
+    color: white;
+    font-size: 16px;
+    background-color: red;
+    line-height: center;
+    padding: 4px 8px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.close p{
+    margin: 0;       
+    padding: 0;      
+    line-height: 1;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+    }
+    100% {
+        opacity: 1; /* Fully visible again */
+    }
+}
+@media screen and (max-width:600px){
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        background-color: #090909;
+    }
+
+    .nav img {
+        margin-left: 10px;
+        width: 85px;
+        height: 85px;
+    }
+    .btn1{
+        display: flex;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    .ham {
+        display: block;
+    }
+    .navbar{
+        background-color: #4f0000;
+    }
+    .navbar ul {
+        position: absolute;
+        top: 85px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        overflow: hidden;
+        text-align: center;
+        background-color: #4f0000;
+    }
+    .navbar ul li{
+        padding: 15px; 
+    }
+    .navbar ul li a{
+        font-size: 16px;
+    }
+    header .navbar.scrolled .btn1{
+    border:none;
+    }
+    .navbar button{
+    
+        /* width: 135.5px;
+        height: 30px; */
+        font-size: 10px;
+        cursor: pointer;
+        padding: 4px 15px;
+        border: white solid 1px;
+        justify-self: end;
+        background-color: #4f0000;
+        color:#FFFFFF;
+        align-self: center;
+    }
+    video{
+        height: 250px;
+        top: 80px;
+        margin-top: 50px;
+        padding-bottom: 30px;
+    }
+   .booking{
+    display: block;
+    justify-items: center;
+    padding-bottom: 40px;
+   }
+   .dates{
+    width: 100%;
+    margin: 45px 0 10px 10px;
+   }
+   .dates .d1,.d2{
+    display: block;
+   }
+   label{
+    font-size: 15px;
+    margin-bottom: 10px;
+   }
+   .dates  input[type="text"]{
+    width: 240px;
+    padding: 5px 5px;
+   }
+   .first-container{
+    width: 100%;
+    display: block;
+    font-size: 12px;
+    text-align: justify;
+    padding: 40px;
+   }
+   .first-container h2{
+    width: 260px;
+    
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    justify-self: center;
+   }
+   .first-container p{
+    font-size: 15px;
+   }
+   .first-container .logo{
+    display: none;
+   }
+    .logoc{
+        display: block;
+        justify-self: center;
+        margin-bottom: 15px;
+   }
+   .logo-content{
+    display: block;
+    margin-left: 30%;
+   }
+   .s1,.s2,.s3{
+    justify-self: start;
+   }
+   .s1 img,.s2 img,.s3 img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+   }
+   .b3{
+    display: none;
+   }
+   .b2,.b3m,.b4{
+    display: block;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+   }
+   .b3m{
+    background-color: #efe8e8;
+   }
+   .content3  button{
+    align-self: self-start;
+   }
+   .img-container{
+    width: 100%;
+    flex-direction: row;
+   }
+   /* .img-container{
+
+   } */
+   .img2,.img3,.img4{
+    box-shadow: 0 10px 15px 10px rgba(0, 0, 0, 0.5);
+    }
+   .content2,.content3,.content4{
+    width: 100%;
+    margin: 25px 0 10px 0 ;
+    padding: 35px 0;
+    align-items: start;
+   }
+   .content2 h2,.content3 h2,.content4 h2{
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 10.5px;
+   }
+   .content2 p,.content3 p,.content4 p{
+    width: 95%;
+    font-size: 16px;
+    margin-left: 10px;
+    text-align: justify;
+   }
+   footer{
+    padding: 0 18px;
+   }
+   .r1,.r2{
+    margin-left: 0;
+    display: block;
+    
+   }
+   .newsletter p{
+    line-height: 40px;
+   }
+   .newsletter input[type="email"]{
+    width: 70%;
+    margin-top: 0;
+    
+   }
+   #sign1{
+    display: none;
+   }
+  .icon-logo , .newsletter ,.about , .contact ,.location{
+    width: 85%;
+    padding: 5px 5px;
+  }
+  .icon{
+    width: 65%;
+    justify-self: end;
+  }
+  .logo img{
+     margin-left: 45%;
+  }
+   .important{
+        width: 300px;
+        height: fit-content;
+        padding: 5px 10px;
+        
+   }
+   .important span{
+    display: none;
+   }
+   #mq{
+    display: block;
+    font-size: 30px;
+   }
+   .important p{
+    font-size: 16px;
+   }
+   .close{
+    width: 45px;
+    height: 25px;
+    border-radius: 5px;
+   }
+   .close p{
+    font-size: 12px;
+   }
+   .bot img {
+    width: 120px; /* or your preferred max size */
+    height: 120px;
+}
+
+}
